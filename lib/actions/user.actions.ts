@@ -167,7 +167,7 @@ export const createBankAccount = async ({
       BANK_COLLECTION_ID!,
       ID.unique(),
       {
-        userId,
+        users: userId,
         bankId,
         accountId,
         accessToken,
@@ -251,7 +251,8 @@ export const getBanks = async ({ userId }: getBanksProps) => {
     const banks = await database.listDocuments(
       DATABASE_ID!,
       BANK_COLLECTION_ID!,
-      [Query.equal('userId', [userId])]
+      [Query.equal('users', [userId])]
+
     )
 
     return parseStringify(banks.documents);
