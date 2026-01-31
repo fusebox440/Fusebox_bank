@@ -6,19 +6,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="flex min-h-screen w-full justify-between font-inter">
+    <main className="flex min-h-screen w-full items-center justify-center bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 font-inter">
       {children}
-      <div className="auth-asset">
-        <div>
-          <Image 
-            src="/icons/auth-image.svg"
-            alt="Auth image"
-            width={500}
-            height={500}
-            className="rounded-l-xl object-contain"
-          />
-        </div>
-      </div>
     </main>
   );
 }
