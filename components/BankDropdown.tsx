@@ -45,7 +45,7 @@ export const BankDropdown = ({
       onValueChange={(value) => handleBankChange(value)}
     >
       <SelectTrigger
-        className={`flex w-full bg-white gap-3 md:w-[300px] ${otherStyles}`}
+        className={`flex w-full bg-gradient-to-r from-purple-50 to-pink-50 border-2 border-purple-200 rounded-xl gap-3 md:w-[300px] hover:border-purple-300 transition-all ${otherStyles}`}
       >
         <Image
           src="icons/credit-card.svg"
@@ -53,10 +53,10 @@ export const BankDropdown = ({
           height={20}
           alt="account"
         />
-        <p className="line-clamp-1 w-full text-left">{selected.name}</p>
+        <p className="line-clamp-1 w-full text-left font-medium text-purple-900">{selected.name}</p>
       </SelectTrigger>
       <SelectContent
-        className={`w-full bg-white md:w-[300px] ${otherStyles}`}
+        className={`w-full bg-white border-2 border-purple-100 rounded-xl md:w-[300px] ${otherStyles}`}
         align="end"
       >
         <SelectGroup>
@@ -67,11 +67,11 @@ export const BankDropdown = ({
             <SelectItem
               key={account.id}
               value={account.appwriteItemId}
-              className="cursor-pointer border-t"
+              className="cursor-pointer border-t hover:bg-purple-50 rounded-lg transition-all"
             >
               <div className="flex flex-col ">
-                <p className="text-16 font-medium">{account.name}</p>
-                <p className="text-14 font-medium text-blue-600">
+                <p className="text-16 font-medium text-gray-900">{account.name}</p>
+                <p className="text-14 font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                   {formatAmount(account.currentBalance)}
                 </p>
               </div>

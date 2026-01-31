@@ -31,15 +31,15 @@ const MobileNav = ({ user }: MobileNavProps) => {
             className="cursor-pointer"
           />
         </SheetTrigger>
-        <SheetContent side="left" className="border-none bg-white">
+        <SheetContent side="left" className="border-none bg-gradient-to-b from-white to-purple-50">
           <Link href="/" className="cursor-pointer flex items-center gap-1 px-4">
             <Image 
               src="/icons/logo.svg"
               width={34}
               height={34}
-              alt="Horizon logo"
+              alt="Fusebox logo"
             />
-            <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">Horizon</h1>
+            <h1 className="text-26 font-ibm-plex-serif font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Fusebox</h1>
           </Link>
           <div className="mobilenav-sheet">
             <SheetClose asChild>
@@ -50,7 +50,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
                 return (
                   <SheetClose asChild key={item.route}>
                     <Link href={item.route} key={item.label}
-                      className={cn('mobilenav-sheet_close w-full', { 'bg-bank-gradient': isActive })}
+                      className={cn('mobilenav-sheet_close w-full', { 'bg-gradient-to-r from-purple-600 to-pink-600 shadow-form': isActive })}
                     >
                         <Image 
                           src={item.imgURL}
@@ -61,7 +61,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
                             'brightness-[3] invert-0': isActive
                           })}
                         />
-                      <p className={cn("text-16 font-semibold text-black-2", { "text-white": isActive })}>
+                      <p className={cn("text-16 font-semibold text-black-2", { "text-white font-bold": isActive })}>
                         {item.label}
                       </p>
                     </Link>

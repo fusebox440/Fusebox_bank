@@ -90,9 +90,9 @@ const AuthForm = ({ type }: { type: string }) => {
               src="/icons/logo.svg"
               width={34}
               height={34}
-              alt="Horizon logo"
+              alt="Fusebox logo"
             />
-            <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">Horizon</h1>
+            <h1 className="text-26 font-ibm-plex-serif font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Fusebox</h1>
           </Link>
 
           <div className="flex flex-col gap-1 md:gap-3">
@@ -119,7 +119,7 @@ const AuthForm = ({ type }: { type: string }) => {
       ): (
         <>
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               {type === 'sign-up' && (
                 <>
                   <div className="flex gap-4">

@@ -22,7 +22,7 @@ const Sidebar = ({ user }: SiderbarProps) => {
             alt="Horizon logo"
             className="size-[24px] max-xl:size-14"
           />
-          <h1 className="sidebar-logo">Horizon</h1>
+          <h1 className="sidebar-logo bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Fusebox</h1>
         </Link>
 
         {sidebarLinks.map((item) => {
@@ -30,7 +30,7 @@ const Sidebar = ({ user }: SiderbarProps) => {
 
           return (
             <Link href={item.route} key={item.label}
-              className={cn('sidebar-link', { 'bg-bank-gradient': isActive })}
+              className={cn('sidebar-link', { 'bg-gradient-to-r from-purple-600 to-pink-600 shadow-form': isActive })}
             >
               <div className="relative size-6">
                 <Image 
@@ -42,7 +42,7 @@ const Sidebar = ({ user }: SiderbarProps) => {
                   })}
                 />
               </div>
-              <p className={cn("sidebar-label", { "!text-white": isActive })}>
+              <p className={cn("sidebar-label", { "!text-white font-bold": isActive })}>
                 {item.label}
               </p>
             </Link>
